@@ -145,7 +145,7 @@ export default function SearchBox({ onSearch, isLoading = false }: SearchBoxProp
                     {/* Turnstile Widget */}
                     <div className="flex justify-center my-2">
                         <Turnstile
-                            siteKey="0x4AAAAAACFVodwOjSj0q1X0"
+                            siteKeysiteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "1x00000000000000000000AA"}
                             options={{ theme: 'light' }}
                             onSuccess={(token) => {
                                 setToken(token);
